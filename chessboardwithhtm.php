@@ -3,7 +3,7 @@
 <title>ChessBoard</title>
 </head>
 <body>
-<table width = "400px" border= "1px" >
+<table width = "400px" border= "1px" cellspacing = "0px" cellpadding = "0px">
 <?php
 for($i=1;$i<=10;$i++){ 
   echo "<tr>";
