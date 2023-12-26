@@ -25,7 +25,7 @@ echo "[".$i."] [".$j."] =>".$array[$i][$j].'<br>';
 }
 echo '<---------------- FOR EACH LOOP -------------> <br>';
 $arrayStudentAssociative = array(
-    array('name'=>'a',"age" => '20','GPA'=>'3.5','email'=> 'emailA@gmail.com'),
+    array('name'=>'a',"age" => '20','gpa'=>'3.5','email'=> 'emailA@gmail.com'),
     array('name'=>'B',"age" => '22','GPA'=>'4.0','email'=> 'emailB@gmail.com'),
 );
 
@@ -34,7 +34,27 @@ foreach ($arrayStudentAssociative as $key => $childArray) {
             echo "The ".$ChildArraykey." is "  .$childArrayValue.'<br>';
     }
 }
+echo '<---------------- SINGLE FOR EACH LOOP -------------> <br>';
+
+foreach ($arrayStudentAssociative as $key => $value) {
+    echo "The student name is ".$value['name'].'<br>';
+    echo "The student Age is ".$value['age'].'<br>';
+
+    if(!isset($value['gpa'])){
+    echo "Key is not there";
+    }
+    else
+    {
+    echo "The GPA Age is ".$value['gpa'].'<br>';
+    }
 
 
+}
+//       Assignment operator
+        // ! =  not equal
+        // == comparision
+        // === comparision with datatype
+        // &(AND)  =  if both condition are true
+        // ||(OR)  = if any of the condition is true
 
 ?>
