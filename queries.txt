@@ -1,0 +1,7 @@
+#Insert the record in todo table 
+
+INSERT INTO todo (title, msg)  VALUES ('Assignments', 'Complete php assignment');
+
+#select the recored from the todo table
+
+SELECT * FROM `todo`
