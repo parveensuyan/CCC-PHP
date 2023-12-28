@@ -22,6 +22,7 @@
       <textarea  class="form-control" style = "height  : 200px !important" id="msg" placeholder="Enter Message" name="msg"></textarea>
     </div>
     <button type="submit" class="btn btn-default">Submit</button>
+    <a href="selecttodo.php" class="anchor">ALL TODOS</a>
   </form>
 </div>
 
