@@ -13,7 +13,7 @@
 if(!empty($result)) { 
 ?>
 <div class="container">
-  <h2>Todo form</h2>
+  <h2>Todo Edit</h2>
   <form action="/edittodosubmission.php" method = "POST">
     <div class="form-group">
       <label for="title">Title:</label>
@@ -23,7 +23,8 @@ if(!empty($result)) {
       <label for="msg">Message:</label>
       <textarea  class="form-control" style = "height  : 200px !important" id="msg" placeholder="Enter Message" name="msg"><?= $result['msg']?></textarea>
     </div>
-    <button type="submit" class="btn btn-default">Submit</button>
+    <input type="hidden" class="" name="id" value = <?= $result['id']?>>
+    <button type="submit" class="btn btn-default">Update</button>
     <a href="/selecttodo.php" class="anchor">ALL TODOS</a>
   </form>
 </div>

@@ -32,7 +32,8 @@
         <td><?= $value[1]?></td>
         <td><?= $value[2]?></td>
         <td>
-            <a href="/edittodo.php?id=<?= $value[0]?>">Edit</a> | <a href="/deletetodo.php?id=<?= $value[0]?>">Delete</a>
+          <!-- /deletetodo.php?id=< $value[0]?> -->
+            <a href="/edittodo.php?id=<?= $value[0]?>">Edit</a> | <a href="javascript:void(0)" onClick = confirmDelete(<?= $value[0]?>)>Delete</a>
         </td>
       </tr>
 <?php } ?>
@@ -42,6 +43,15 @@
 </div>
 </body>
 </html>
+<script>
+function confirmDelete (id) {
+ var status = confirm ("Are you sure to delete this record?")
+// status true means user select ok and false : selected cancel
+  if(status === true){
+    window.location.href = "/deletetodo.php?id="+id
+  }
+}
+</script>
 <?php
 function getRecords(){
 include("config.php");
