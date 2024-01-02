@@ -16,7 +16,7 @@ session_start();
 if(!empty($result)) { 
 ?>
 <div class="container">
-  <h2>Todo <?=  $_SESSION["user"]?></h2>
+  <h2>Todo <?= isset($_SESSION["user"]) ?  $_SESSION["user"] : '' ?></h2>
   <form action="/edittodosubmission.php" method = "POST">
     <div class="form-group">
       <label for="title">Title:</label>
