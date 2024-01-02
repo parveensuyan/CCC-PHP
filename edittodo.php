@@ -9,11 +9,14 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 <body>
-<?php $result = getSingleRecord();
+<?php
+session_start();
+
+ $result = getSingleRecord();
 if(!empty($result)) { 
 ?>
 <div class="container">
-  <h2>Todo Edit</h2>
+  <h2>Todo <?=  $_SESSION["user"]?></h2>
   <form action="/edittodosubmission.php" method = "POST">
     <div class="form-group">
       <label for="title">Title:</label>
