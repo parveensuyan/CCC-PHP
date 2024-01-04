@@ -17,7 +17,6 @@
       <label for="image"> Upload Image:</label>
       <input type="file" class="form-control" id="image" name="image">
     </div>
-
     <button type="submit" class="btn btn-default">Submit</button>
   </form>
 </div>
